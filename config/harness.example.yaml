@@ -1,0 +1,37 @@
+# Proposed format only; no runtime consumes this file yet.
+template_version: 1
+state: template
+harness:
+  id: TODO
+  name: TODO
+  vertical: TODO
+  owner_subject: null
+  runtime: null
+  instruction_file: ../prompts/system.md
+  domain_brief: ../domain/brief.md
+  domain_rules: ../domain/rules.md
+  glossary: ../domain/glossary.md
+  output_contract: ../domain/output-contract.md
+  workflow: ../workflows/primary.md
+configuration:
+  deployment: deployment.example.yaml
+  access: access.example.yaml
+  models: models.example.yaml
+  tools: tools.example.yaml
+  context: context.example.yaml
+execution:
+  mode: template
+  max_concurrent_runs: 1 # Proposed initial value; tune after evaluations.
+  max_steps_per_run: 30 # Proposed bounded loop, not a measured limit.
+  max_wall_time_seconds: 900
+  cost_budget_source: models.example.yaml
+  max_transient_retries: 2
+  cancellation: required
+  authorization_enforcement: runtime_required
+  resume_from_persisted_checkpoint: required
+evaluation:
+  cases: ../evals/cases.example.jsonl
+  rubric: ../evals/rubric.md
+operations:
+  runbook: ../operations/runbook.md
+  run_record_template: ../templates/run-record.md

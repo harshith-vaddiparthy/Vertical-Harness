@@ -1,0 +1,11 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+artifacts/
+runs/
+logs/
+.cache/

@@ -1,0 +1,37 @@
+template_version: 1
+state: template
+execution:
+  host_kind: null # Local machine, remote VM, container or managed service.
+  host_id: null
+  operating_system: null
+  runtime_name: null
+  runtime_version: null
+  workspace_root: null
+  service_identity_ref: null
+  environment: null # Development, staging or production.
+  isolation_boundary: null # Per-user, per-project or per-tenant worker.
+  writable_paths: []
+  allowed_network_destinations: []
+  secret_manager_ref: null
+interface:
+  surface: null # CLI, web workspace, API or another specified surface.
+  authentication_provider: null
+  identity_mapping_ref: null
+task_transport:
+  trigger_kind: null # Manual, API, webhook, schedule or queue.
+  source_ref: null
+  queue_ref: null
+storage:
+  task_state_backend: null
+  artifact_root: null
+  logs_root: null
+  backup_ref: null
+  retention_days: null
+delivery:
+  destination_ref: null
+  verification_method: null
+operations:
+  health_check: null
+  start_command: null
+  stop_command: null
+  rollback_ref: null

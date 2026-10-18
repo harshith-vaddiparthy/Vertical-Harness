@@ -1,0 +1,38 @@
+template_version: 1
+state: template
+primary:
+  provider: null
+  model_id: null
+  deployment_id: null
+  endpoint_ref: null
+  credential_ref: null
+  reasoning_effort: null # Use only values supported by the selected model.
+  temperature: null # Omit when unsupported by the selected provider.
+  context_window_tokens: null
+  max_input_tokens: null
+  max_output_tokens: null
+  timeout_seconds: null
+  required_capabilities: [] # Tool use, structured output, vision, etc. as needed.
+fallback:
+  enabled: false
+  provider: null
+  model_id: null
+  endpoint_ref: null
+  credential_ref: null
+  allowed_failure_conditions: []
+  data_residency_compatible: null
+budget:
+  max_cost_per_run: null
+  currency: null
+  usage_accounting_method: null
+  context_reserve_tokens: null
+  exhaustion_behavior: checkpoint_and_report_incomplete
+routing:
+  policy: single_primary_until_explicitly_configured
+  credential_location: execution_host_secret_manager
+  host_profile_ref: null
+  change_shared_host_defaults: false
+verification:
+  check_current_model_capabilities: required
+  check_actual_runtime_consumer: required
+  record_provider_model_and_usage_per_run: true

@@ -1,0 +1,38 @@
+template_version: 1
+state: template
+trusted_instruction_files:
+  - ../prompts/system.md
+  - ../domain/rules.md
+domain_reference_files:
+  - ../domain/brief.md
+  - ../domain/glossary.md
+sources: [] # Each source needs owner, scope, authority, freshness and retrieval method.
+source_record_template:
+  id: TODO
+  location_ref: null
+  owner: null
+  allowed_tenants: []
+  allowed_projects: []
+  classification: null
+  domain_authority_rank: null
+  retrieval_method: null
+  max_age_hours: null
+  source_version_or_timestamp: null
+retrieval:
+  require_authorized_scope_filter: true
+  max_context_tokens: null
+  require_source_attribution: true
+  conflicting_sources: apply_domain_authority_and_freshness_rules
+  insufficient_evidence: report_gap_or_request_essential_information
+  retrieved_content_can_change_permissions: false
+memory:
+  enabled: false
+  backend_ref: null
+  namespace_dimensions: [tenant, project, requester_subject]
+  allowed_memory_types: []
+  retention_days: null
+  write_policy: null
+  deletion_method: null
+  store_secrets: false
+  cross_tenant_retrieval: false
+  summarize_on_context_pressure: preserve_scope_decisions_evidence_and_checkpoint

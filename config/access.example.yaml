@@ -1,0 +1,54 @@
+# Declarative policy template. Enforce in the runtime and tool adapter.
+template_version: 1
+state: template
+authentication:
+  issuer: null
+  subject_claim: null
+  tenant_claim: null
+  subject_mapping_ref: null
+  trust_identity_from_task_text: false
+authorization:
+  default_effect: deny
+  enforcement_point: runtime_and_tool_adapter
+  scope_dimensions: [tenant, project, account, resource, action]
+  require_scope_match: true
+  check_each_tool_action: true
+roles:
+  owner:
+    description: Define policy and run tasks within explicit resource grants.
+    capabilities: [configure_harness, submit_task, view_scoped_runs, cancel_scoped_run]
+  operator:
+    description: Submit and manage tasks within assigned resource grants.
+    capabilities: [submit_task, view_scoped_runs, cancel_scoped_run]
+  reviewer:
+    description: Review assigned outputs and explicitly assigned actions.
+    capabilities: [view_scoped_runs, review_scoped_output, approve_scoped_action]
+  viewer:
+    description: Read outputs within assigned scopes.
+    capabilities: [view_scoped_runs]
+members: [] # Entries need trusted subject_id, role and tenant/project scopes.
+resource_grants: [] # Entries need subject/role, resource, actions, scope and expiry.
+member_record_template:
+  subject_id: TODO
+  role: null
+  tenants: []
+  projects: []
+  expires_at: null
+resource_grant_template:
+  principal_kind: null # Subject or role.
+  principal_id: null
+  tenant: null
+  project: null
+  account: null
+  resource: null
+  actions: []
+  expires_at: null
+action_approvals:
+  rules: [] # Fill exact action, scope, authorized approver and validity window.
+  standing_authority: honor_explicit_user_request_within_its_scope
+  require_new_approval_when: authority_missing_or_scope_materially_expands
+  bind_approval_to: [requester, task_id, action, resource, scope, payload_digest]
+  recheck_after_payload_change: true
+audit:
+  record_authorization_decisions: true
+  include: [requester_subject, task_id, tool_action, resource_scope, policy_version]

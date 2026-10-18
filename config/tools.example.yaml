@@ -1,0 +1,35 @@
+template_version: 1
+state: template
+defaults:
+  allow_unregistered_tools: false
+  authorization_check: before_each_action
+  effective_scope: intersection_of_requester_runtime_and_credential_grants
+  credentials: execution_host_secret_manager
+  external_content_trust: untrusted_data
+  log_secret_values: false
+registered_tools: [] # Fill tool records using the disabled example below.
+tool_record_template:
+  id: TODO
+  enabled: false
+  purpose: TODO
+  adapter_kind: null # API, CLI, connector or browser adapter.
+  adapter_ref: null
+  credential_ref: null
+  account_ref: null
+  allowed_actions: []
+  allowed_resources: []
+  required_role_capabilities: []
+  input_schema_ref: null
+  output_schema_ref: null
+  side_effect_class: null # Read, write, send, publish, delete or spend.
+  authorization_policy_ref: access.example.yaml
+  dry_run_supported: null
+  timeout_seconds: null
+  retryable_errors: []
+  max_retries: null
+  rate_limit: null
+  idempotency_strategy: null
+  status_lookup_method: null
+  completion_evidence: null
+  compensation_or_rollback: null
+  output_redaction_rules: []
