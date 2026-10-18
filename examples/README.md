@@ -6,6 +6,7 @@ Each example lives in a separate repository so learners can fork, clone, develop
 | --- | --- | --- |
 | [Android TV Harness](android-tv/README.md) | Android TV/Google TV launcher, one optional @J.A.R.V.I.S. entry, verified ADB workflows and recovery | [Android-TV-Harness](https://github.com/harshith-vaddiparthy/Android-TV-Harness) |
 | [3D Printing Harness](3d-printing/README.md) | Local 3MF/STL viewer, print-plate inspection, transform edits and STL export | [3D-Printing-Harness](https://github.com/harshith-vaddiparthy/3D-Printing-Harness) |
+| [Financial Modeling Harness](financial-modeling/README.md) | Startup/corporate forecasts, linked statements, cash/funding scenarios, verified runs and native Hermes skill/MCP tools | [Financial-Modeling-Harness](https://github.com/harshith-vaddiparthy/Financial-Modeling-Harness) |
 
 Use the root [task.md](../task.md) to design your vertical. Each example documents its implemented capabilities, prerequisites and verification limits in its own repository.
 

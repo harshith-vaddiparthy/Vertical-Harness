@@ -47,6 +47,8 @@ Keep credentials outside the repository and reference your execution host's secr
 
 Explore [specialized harness examples](examples/README.md). [Android TV Harness](examples/android-tv/README.md) is a separate executable Android TV/Google TV specialization with one optional @J.A.R.V.I.S. button, verified device actions and recovery. Its implementation lives in [Android-TV-Harness](https://github.com/harshith-vaddiparthy/Android-TV-Harness); this repository remains the reusable template.
 
+**Financial modeling:** [Financial Modeling Harness](examples/financial-modeling/README.md) combines startup planning and integrated-statement skills with a deterministic Python engine, scenario reports, private run evidence and a direct Hermes skill/MCP integration. Its [standalone repository](https://github.com/harshith-vaddiparthy/Financial-Modeling-Harness) is independently runnable.
+
 ## License
 
 [MIT](LICENSE). You can fork, modify and use this template, including commercially, under the license terms.
