@@ -40,6 +40,10 @@ templates/    Run evidence and design decision records
 
 Keep credentials outside the repository and reference your execution host's secret manager. Access rules and prompts describe intended behavior; your runtime and tool adapters must enforce permissions, isolation and budgets.
 
+## Examples
+
+Explore [specialized harness examples](examples/README.md). [Android TV Harness](examples/android-tv/README.md) is a separate executable Android TV/Google TV specialization with one optional @J.A.R.V.I.S. button, verified device actions and recovery. Its implementation lives in [Android-TV-Harness](https://github.com/harshith-vaddiparthy/Android-TV-Harness); this repository remains the reusable template.
+
 ## License
 
 [MIT](LICENSE). You can fork, modify and use this template, including commercially, under the license terms.
