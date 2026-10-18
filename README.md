@@ -4,6 +4,8 @@ An open-source starting template for designing a specialized AI agent harness: t
 
 Use it for a focused vertical such as finance operations, course production or customer support. Define what the specialist does, where tasks run, who has access and what evidence proves a task is finished.
 
+**Try a working specialization:** [3D Printing Harness](examples/3d-printing/README.md) opens 3MF/STL files in an interactive localhost workbench, checks print-plate placement and exports basic geometry edits. Browse [all examples](examples/README.md) or fork its [separate repository](https://github.com/harshith-vaddiparthy/3D-Printing-Harness).
+
 **Current status:** a planning and configuration template. It contains no runtime implementation or connected services. The example configuration format must be adapted and enforced by the runtime you choose.
 
 ## Fork and get started
@@ -36,6 +38,7 @@ prompts/      Specialist system prompt template
 evals/        Example cases and quality rubric
 operations/   Readiness, monitoring, recovery and rollback
 templates/    Run evidence and design decision records
+examples/     Directory of independently usable specialized harnesses
 ```
 
 Keep credentials outside the repository and reference your execution host's secret manager. Access rules and prompts describe intended behavior; your runtime and tool adapters must enforce permissions, isolation and budgets.
